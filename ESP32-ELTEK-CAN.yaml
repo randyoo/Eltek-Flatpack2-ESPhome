@@ -1,8 +1,17 @@
-esphome:
+substitutions:
+  sn: "0631710160380000" # Insert the 16 digit serial number of your unit here!
   name: esp32-eltek-can
+  device_description: "Monitor and control Eltek Flatpack2 via CAN"
+  tx_pin: GPIO18
+  rx_pin: GPIO19
+  board: wemos_d1_mini32
+
+esphome:
+  name: ${name}
+  comment: ${device_description}
 
 esp32:
-  board: wemos_d1_mini32
+  board: ${board}
   framework:
     type: arduino
 
@@ -41,8 +50,8 @@ globals:
 
 canbus:
   - platform: esp32_can
-    rx_pin: GPIO19
-    tx_pin: GPIO18
+    rx_pin: ${rx_pin}
+    tx_pin: ${tx_pin}
     can_id: 1
     id: eltek
     use_extended_id: true
@@ -73,7 +82,6 @@ interval:
           can_id: 0x05004804
           canbus_id: eltek
           data: [0x06, 0x31, 0x71, 0x01, 0x60, 0x38, 0x00, 0x00]   # update with your serial number as HEX
-      - canbus.send:
           use_extended_id: true
           can_id: 0x05FF4004
           canbus_id: eltek
