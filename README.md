@@ -12,7 +12,7 @@ https://openinverter.org/forum/viewtopic.php?t=1351
 
 ## Notes
 - note that PSU reverts to the default voltage with *no current limit* when in a no-communication state
-- CAN bus is wired directly from the PSU--you a PCB to connect the backplane
+- CAN bus is wired directly from the PSU--you'll want/need a PCB to connect to the backplane
 - current limiting only works above 48V on the output terminals
 
 ## How it looks in Home assistant:
