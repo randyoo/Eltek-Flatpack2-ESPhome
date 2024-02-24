@@ -1,7 +1,8 @@
 # ESP32 Eltek Flatpack2 HE CAN controller
-# with hints from:
-# https://github.com/taHC81/Eltek-Flatpack2-ESPhome/blob/main/ESP32-ELTEK-CAN.yaml
+# forked from https://github.com/taHC81/Eltek-Flatpack2-ESPhome/blob/main/ESP32-ELTEK-CAN.yaml
+# info from:
 # https://openinverter.org/forum/viewtopic.php?t=1351&sid=406007670a2a5d171ba325748d867cfa&start=25
+# https://www.thebackshed.com/forum/ViewTopic_mobile.php?TID=12035&P=1
 substitutions:
   tx_pin: GPIO1
   rx_pin: GPIO3
