@@ -3,6 +3,7 @@
 # info from:
 # https://openinverter.org/forum/viewtopic.php?t=1351&sid=406007670a2a5d171ba325748d867cfa&start=25
 # https://www.thebackshed.com/forum/ViewTopic_mobile.php?TID=12035&P=1
+# https://github.com/The6P4C/Flatpack2/blob/master/Protocol.md
 substitutions:
   tx_pin: GPIO1
   rx_pin: GPIO3
